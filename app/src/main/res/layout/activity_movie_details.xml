@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/main_background_color"
+        tools:context=".MovieDetailsActivity"
+        >
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/activity_movie_details_toolbar"
+            style="@style/movieDetailsToolbarTheme"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            />
+
+        <ImageView
+            android:id="@+id/activity_movie_details_poster"
+            style="@style/movieDetailsPosterTheme"
+            android:src="@drawable/ic_poster_avengers"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            />
+
+        <LinearLayout
+            android:id="@+id/movie_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/movie_details_title_linear_gradient"
+            android:orientation="vertical"
+            android:paddingHorizontal="@dimen/default_margin_horizontal"
+            app:layout_constraintBottom_toBottomOf="@+id/activity_movie_details_poster"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/activity_movie_details_poster"
+            >
+
+            <TextView
+                android:id="@+id/activity_movie_details_min_age"
+                style="@style/AccentTextViewTheme"
+                android:text="@string/avengers_min_age"
+                android:textSize="@dimen/smallest_text_size"
+                />
+
+            <TextView
+                android:id="@+id/activity_movie_details_title"
+                style="@style/AccentTextViewTheme"
+                android:text="@string/avengers_end_game_title"
+                android:textColor="@color/primaryTextColor"
+                android:textSize="@dimen/large_text_size"
+                />
+
+            <TextView
+                android:id="@+id/activity_movie_details_genre"
+                style="@style/AccentTextViewTheme"
+                android:layout_marginTop="4dp"
+                android:text="@string/avengers_end_game_genre"
+                android:textColor="@color/movieGenreColor"
+                android:textStyle="normal"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:orientation="horizontal"
+                >
+
+                <ImageView
+                    style="@style/movieStarTheme"
+                    android:src="@drawable/ic_star_enabled_icon"
+                    />
+
+                <ImageView
+                    style="@style/movieStarTheme"
+                    android:src="@drawable/ic_star_enabled_icon"
+                    />
+
+                <ImageView
+                    style="@style/movieStarTheme"
+                    android:src="@drawable/ic_star_enabled_icon"
+                    />
+
+                <ImageView
+                    style="@style/movieStarTheme"
+                    android:src="@drawable/ic_star_enabled_icon"
+                    />
+
+                <ImageView
+                    style="@style/movieStarTheme"
+                    android:src="@drawable/ic_star_disabled_icon"
+                    />
+
+                <TextView
+                    android:id="@+id/activity_main_details_reviews"
+                    style="@style/AccentTextViewTheme"
+                    android:text="@string/avengers_end_game_reviews"
+                    android:textAllCaps="true"
+                    android:textColor="@color/moviewReviewsColor"
+                    />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/activity_movie_details_storyline"
+                style="@style/AccentTextViewTheme"
+                android:layout_marginTop="20dp"
+                android:text="@string/movie_storyline"
+                android:textColor="@color/primaryTextColor"
+                />
+
+            <TextView
+                style="@style/AccentTextViewTheme"
+                android:alpha="0.75"
+                android:lineSpacingExtra="@dimen/movie_story_line_spacing_extra"
+                android:paddingVertical="@dimen/small_text_padding_vertical"
+                android:text="@string/avengers_end_game_storyline_story"
+                android:textStyle="normal"
+                />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/cast"
+            style="@style/AccentTextViewTheme"
+            android:layout_marginHorizontal="@dimen/default_margin_horizontal"
+            android:layout_marginTop="20dp"
+            android:text="@string/activity_movie_details_cast_title"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/movie_info"
+            />
+
+        <LinearLayout
+            android:id="@+id/activity_movie_details_actors"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/default_margin_horizontal"
+            android:layout_marginVertical="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cast"
+            >
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="1"
+                >
+
+                <ImageView
+                    android:id="@+id/actor_robert"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ic_actor_robert"
+                    />
+
+                <TextView
+                    android:id="@+id/actor_robert_name"
+                    style="@style/AccentTextViewTheme"
+                    android:layout_width="@dimen/activity_details_actor_name_width"
+                    android:layout_marginTop="@dimen/actor_name_margin_top"
+                    android:text="@string/actor_robert_name"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="1"
+                >
+
+                <ImageView
+                    android:id="@+id/actor_chris"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ic_actor_chris"
+                    />
+
+                <TextView
+                    android:id="@+id/actor_chris_name"
+                    style="@style/AccentTextViewTheme"
+                    android:layout_width="@dimen/activity_details_actor_name_width"
+                    android:layout_marginTop="@dimen/actor_name_margin_top"
+                    android:text="@string/actor_chris_name"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="1"
+                >
+
+                <ImageView
+                    android:id="@+id/actor_mark"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:src="@drawable/ic_actor_mark"
+                    />
+
+                <TextView
+                    android:id="@+id/actor_mark_name"
+                    style="@style/AccentTextViewTheme"
+                    android:layout_width="@dimen/activity_details_actor_name_width"
+                    android:layout_marginTop="@dimen/actor_name_margin_top"
+                    android:text="@string/actor_mark_name"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
+
+                <ImageView
+                    android:id="@+id/actor_hemsworth"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:src="@drawable/ic_actor_hemsworth"
+                    />
+
+                <TextView
+                    android:id="@+id/actor_hemsworth_name"
+                    style="@style/AccentTextViewTheme"
+                    android:layout_width="@dimen/activity_details_actor_name_width"
+                    android:layout_marginTop="@dimen/actor_name_margin_top"
+                    android:text="@string/actor_hemsworth_name"
+                    />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

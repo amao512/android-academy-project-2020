@@ -1,9 +1,9 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Theme.AndroidAcademyProject" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+    <style name="Theme.AndroidAcademyProject" parent="Theme.MaterialComponents.NoActionBar">
         <!-- Primary brand color. -->
-        <item name="colorPrimary">@color/purple_500</item>
-        <item name="colorPrimaryVariant">@color/purple_700</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryVariant">@color/colorPrimaryVariant</item>
         <item name="colorOnPrimary">@color/white</item>
         <!-- Secondary brand color. -->
         <item name="colorSecondary">@color/teal_200</item>
@@ -12,5 +12,35 @@
         <!-- Status bar color. -->
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
+    </style>
+
+    <style name="movieDetailsToolbarTheme">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/toolbar_height</item>
+        <item name="android:layout_marginTop">@dimen/toolbar_margin_top</item>
+    </style>
+
+    <style name="movieDetailsPosterTheme">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/activity_movie_details_poster_height</item>
+        <item name="android:scaleType">centerCrop</item>
+    </style>
+
+    <style name="DefaultTextViewTheme">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="AccentTextViewTheme" parent="DefaultTextViewTheme">
+        <item name="android:textColor">@color/accentTextColor</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">@dimen/small_text_size</item>
+    </style>
+
+    <style name="movieStarTheme">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginEnd">3dp</item>
+        <item name="android:layout_gravity">center_vertical</item>
     </style>
 </resources>
